@@ -217,8 +217,9 @@ function buscartarea() {
             return buscartarea();
         }
         let resultados = [];
+        const busquedaMinusculas = busqueda.toLowerCase();
         for(let i=0;i<tareas.length;i++){
-            if(tareas[i].titulo === busqueda) resultados.push(tareas[i]);
+            if(tareas[i].titulo.toLowerCase() === busquedaMinusculas) resultados.push(tareas[i]);
         }
         if(resultados.length === 0){
             console.log("No se encontraron tareas con ese título.");
